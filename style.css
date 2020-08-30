@@ -8,9 +8,6 @@ button{
 select{
     font-size: x-large; 
 }
-progress{
-    width: 50%;
-}
 .box{
     padding: 24px;
     margin-left: 240px;

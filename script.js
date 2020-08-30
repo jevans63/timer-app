@@ -1,7 +1,6 @@
 const STARTBUTTON = document.querySelector("#start");
 const RESETBUTTON = document.querySelector("#reset");
 const SECONDS = document.querySelector("#seconds");
-// const PROGRESSBAR = document.querySelector("#progress");
 const BAR = document.querySelector(".bar")
 const ALERT = document.querySelector(".alert");
 
@@ -19,9 +18,7 @@ function alarmSound() {
 //
 function runTimer(){
     if(timer > 0) --timer;
-    // PROGRESSBAR.value = timer;
     BAR.style.width = (timer/max)*100 + "%";
-    // BAR.style.width = timer*20 + "px";
     if(timer == 0){
         ALERT.innerHTML = "ALERT!";
         alarmSound();
@@ -32,8 +29,6 @@ function runTimer(){
 //
 function start(){
     timer = SECONDS.value;
-    // PROGRESSBAR.value = timer;
-    // PROGRESSBAR.max = timer;
     max = timer;
     interval = setInterval(runTimer, 1000);
     RESETBUTTON.removeAttribute("hidden");
@@ -45,7 +40,6 @@ function reset(){
     timerStopped = false;
     clearInterval(interval);
     timer = SECONDS.value;
-    // PROGRESSBAR.value = timer;
     BAR.style.width = "100%";
     RESETBUTTON.replaceWith(STARTBUTTON);
     ALERT.innerHTML = "";
