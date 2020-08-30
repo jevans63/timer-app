@@ -21,7 +21,7 @@ function start(){
     timer = SECONDS.value;
     PROGRESSBAR.value = timer;
     PROGRESSBAR.max = timer;
-    interval = setInterval(runTimer, 100);
+    interval = setInterval(runTimer, 1000);
     RESETBUTTON.removeAttribute("hidden");
     STARTBUTTON.replaceWith(RESETBUTTON);
 }
