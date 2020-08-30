@@ -2,29 +2,32 @@ const TIMER = document.querySelector(".timer");
 const STARTBUTTON = document.querySelector("#start");
 const STOPBUTTON = document.querySelector("#stop");
 
-var isRunning = false;
+var timerRunning = false;
 var interval;
-timer = [1,0,0];
+var timer = 60;
 
 //
 function runTimer(){
-    let currentTime = Math.abs(timer[0]) + ":" + timer[1];
-    TIMER.innerHTML = currentTime;
-    timer[2]--;
-    timer[0] = Math.floor((timer[2]/100)/60);
-    timer[1] = Math.floor((timer[2]/100) - (timer[0] * 60));
+    TIMER.innerHTML = --timer;
+    // let currentTime = timer;
+    // TIMER.innerHTML = currentTime;
+    
 }
 
 //
 function start(){
     timerRunning = true;
-    interval = setInterval(runTimer, 10);
+    TIMER.innerHTML = timer;
+    interval = setInterval(runTimer, 1000);
+    STOPBUTTON.removeAttribute("hidden");
+    STARTBUTTON.replaceWith(STOPBUTTON);
 }
 
 //
 function stop(){
     timerRunning = false;
     clearInterval(interval);
+    STOPBUTTON.replaceWith(STARTBUTTON);
 }
 
 STARTBUTTON.addEventListener("click", start, false);
