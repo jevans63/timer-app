@@ -1,6 +1,5 @@
 body{
     font-size: 64px;
-    text-align: center;
 }
 button{
     font-size: x-large;
@@ -10,4 +9,9 @@ select{
 }
 progress{
     width: 50%;
+}
+.bar{
+    height:12px; 
+    width:100%;
+    background-color: blue;
 }
