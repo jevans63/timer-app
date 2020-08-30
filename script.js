@@ -9,7 +9,7 @@ var timer = 0;
 
 //
 function runTimer(){
-    TIMER.innerHTML = --timer;
+    if(timer > 0) TIMER.innerHTML = --timer;
 }
 
 //
@@ -22,7 +22,7 @@ function start(){
 }
 
 //
-function stop(){
+function reset(){
     timerStopped = false;
     clearInterval(interval);
     timer = 0;
@@ -31,4 +31,4 @@ function stop(){
 }
 
 STARTBUTTON.addEventListener("click", start, false);
-RESETBUTTON.addEventListener("click", stop, false);
+RESETBUTTON.addEventListener("click", reset, false);
