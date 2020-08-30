@@ -11,7 +11,6 @@ function runTimer(){
     TIMER.innerHTML = --timer;
     // let currentTime = timer;
     // TIMER.innerHTML = currentTime;
-    
 }
 
 //
