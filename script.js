@@ -4,7 +4,7 @@ const STOPBUTTON = document.querySelector("#stop");
 
 var isRunning = false;
 var interval;
-timer = [2,0,0];
+timer = [1,0,0];
 
 //
 function runTimer(){
