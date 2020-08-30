@@ -1,33 +1,34 @@
 const TIMER = document.querySelector(".timer");
 const STARTBUTTON = document.querySelector("#start");
-const STOPBUTTON = document.querySelector("#stop");
+const RESETBUTTON = document.querySelector("#reset");
+const SECONDS = document.querySelector('#seconds');
 
-var timerRunning = false;
+var timerStopped = false;
 var interval;
-var timer = 60;
+var timer = 0;
 
 //
 function runTimer(){
     TIMER.innerHTML = --timer;
-    // let currentTime = timer;
-    // TIMER.innerHTML = currentTime;
 }
 
 //
 function start(){
-    timerRunning = true;
+    timer = SECONDS.value;
     TIMER.innerHTML = timer;
     interval = setInterval(runTimer, 1000);
-    STOPBUTTON.removeAttribute("hidden");
-    STARTBUTTON.replaceWith(STOPBUTTON);
+    RESETBUTTON.removeAttribute("hidden");
+    STARTBUTTON.replaceWith(RESETBUTTON);
 }
 
 //
 function stop(){
-    timerRunning = false;
+    timerStopped = false;
     clearInterval(interval);
-    STOPBUTTON.replaceWith(STARTBUTTON);
+    timer = 0;
+    TIMER.innerHTML = timer;
+    RESETBUTTON.replaceWith(STARTBUTTON);
 }
 
 STARTBUTTON.addEventListener("click", start, false);
-STOPBUTTON.addEventListener("click", stop, false);
+RESETBUTTON.addEventListener("click", stop, false);
