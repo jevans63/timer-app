@@ -15,6 +15,7 @@ function runTimer(){
     if(timer > 0) --timer;
     // PROGRESSBAR.value = timer;
     BAR.style.width = (timer/max)*100 + "%";
+    // BAR.style.width = timer*20 + "px";
     if(timer == 0)
         ALERT.innerHTML = "ALERT!";
 }
