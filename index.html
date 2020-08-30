@@ -5,16 +5,20 @@
         <link rel = "stylesheet" href="style.css">
     </head>
     <body>
-        <div class = "timer">0</div>
+        <!-- <div class = "timer">0</div> -->
+        <!-- <progress value = "65" max = "100"/> -->
         <select id="seconds">
-            <option value="60">1 Minute</option>
-            <option value="120">2 Minutes</option>
-            <option value="180">3 Minutes</option>
-            <option value="240">4 Minutes</option>
-            <option value="300">5 Minutes</option>
+            <option value = "60">1 Minute</option>
+            <option value = "120">2 Minutes</option>
+            <option value = "180">3 Minutes</option>
+            <option value = "240">4 Minutes</option>
+            <option value = "300">5 Minutes</option>
         </select>
         <button id = "start">START</button>
         <button hidden id = "reset">RESET</button>
-
+        <br>
+        <div class = "alert"></div>
+        <progress id = "progress" value = "60" max = "60">
+        
     </body>
 </html>
