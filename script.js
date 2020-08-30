@@ -9,13 +9,14 @@ var interval;
 var timer = 0;
 var max;
 
-// 
+// simple alert sound
 function alarmSound() {
     var audio = new Audio('pluck.mp3');
     audio.play();
 }
 
-//
+// timer is illustrated by CSS based progress bar
+// alert sound plays and alert text appears when timer == 0
 function runTimer(){
     if(timer > 0) --timer;
     BAR.style.width = (timer/max)*100 + "%";
@@ -26,7 +27,8 @@ function runTimer(){
     }
 }
 
-//
+// starts the timer
+// replaces start button with reset button
 function start(){
     timer = SECONDS.value;
     max = timer;
@@ -35,7 +37,9 @@ function start(){
     STARTBUTTON.replaceWith(RESETBUTTON);
 }
 
-//
+// stops the timer
+// replaces reset button with start button
+// clears alert text
 function reset(){
     timerStopped = false;
     clearInterval(interval);
