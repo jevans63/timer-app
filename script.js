@@ -10,14 +10,23 @@ var interval;
 var timer = 0;
 var max;
 
+// 
+function alarmSound() {
+    var audio = new Audio('pluck.mp3');
+    audio.play();
+}
+
 //
 function runTimer(){
     if(timer > 0) --timer;
     // PROGRESSBAR.value = timer;
     BAR.style.width = (timer/max)*100 + "%";
     // BAR.style.width = timer*20 + "px";
-    if(timer == 0)
+    if(timer == 0){
         ALERT.innerHTML = "ALERT!";
+        alarmSound();
+        timer--;
+    }
 }
 
 //
