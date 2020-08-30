@@ -4,10 +4,10 @@ const SECONDS = document.querySelector("#seconds");
 const BAR = document.querySelector(".bar")
 const ALERT = document.querySelector(".alert");
 
-var timerStopped = false;
 var interval;
-var timer = 0;
 var max;
+var timer = 0;
+
 
 // simple alert sound
 function alarmSound() {
@@ -41,7 +41,6 @@ function start(){
 // replaces reset button with start button
 // clears alert text
 function reset(){
-    timerStopped = false;
     clearInterval(interval);
     timer = SECONDS.value;
     BAR.style.width = "100%";
