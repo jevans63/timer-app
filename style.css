@@ -15,20 +15,15 @@ progress{
     padding: 24px;
     margin-left: 240px;
     margin-right: 240px;
-    /* position: absolute; */
 }
 .bar{
     margin-top: -24px;
-    /* position: absolute; */
     height: 24px; 
     width: 100%;
     background-color: lightcoral;  
-    /* z-index: 2; */
 }
 .bar2{
-    /* top: -24px;  */
     height: 24px; 
     width: 100%;
     background-color:lightgreen;  
-    /* z-index: 1; */
 }
