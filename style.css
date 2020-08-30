@@ -8,3 +8,6 @@ button{
 select{
     font-size: x-large; 
 }
+progress{
+    width: 50%;
+}
