@@ -1,2 +1,3 @@
 # timer-app
-timer web app
+A simple countdown timer.
+Copyright 2020 Joshua Evans
