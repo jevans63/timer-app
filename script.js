@@ -8,7 +8,6 @@ var interval;
 var max;
 var timer = 0;
 
-
 // simple alert sound
 function alarmSound() {
     var audio = new Audio('pluck.mp3');
