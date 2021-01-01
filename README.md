@@ -1,2 +1,2 @@
-# timer-app-js
+# timer-app
 A simple countdown timer built with javascript
